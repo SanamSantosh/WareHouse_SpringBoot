@@ -3,12 +3,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="Style.css">
 <meta charset="UTF-8">
 <title>Login Page</title>
 </head>
 <body>
 <form name="index" style="text-align:center" method="post" action="logincontrol">
-<h3 style="color:blue">Login</h3>
+<h3>Login</h3>
 <table border="1" align="center">
 <tr><td>Login Id:</td><td><input type="text" name="login_id" value=""></td></tr>
 <tr><td>Password:</td><td><input type="password" name="password" value=""></td></tr>

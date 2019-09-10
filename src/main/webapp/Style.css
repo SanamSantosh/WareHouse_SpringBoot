@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+body {
+background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBQD-eak4ZN0blW-X6nNBoDfWek98iDfjJ5F5JJuuO7WlwEfnt3w");
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: scroll;
+background-size: 2000px;
+}
+
+input[type=text]{
+background: #B9DFFF;
+text-shadow: 2px 2px 5px silver;
+color: black;
+}
+
+input[type=password]{
+background: #B9DFFF;
+color: black;
+}
+
+input[type=submit] {
+background: #B9DFFF;
+border:none;
+height: 35px;
+text-shadow: 2px 2px 5px silver;
+width: 150px;
+border-radius: 12px;
+}
+
+input[type=button] {
+background: #B9DFFF;
+border:none;
+height: 35px;
+text-shadow: 2px 2px 5px silver;
+width: 150px;
+border-radius: 12px;
+}
+
+input[type=reset] {
+background: #B9DFFF;
+border:none;
+height: 35px;
+text-shadow: 2px 2px 5px silver;
+width: 50px;
+border-radius: 12px;
+}

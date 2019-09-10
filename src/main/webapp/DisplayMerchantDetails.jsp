@@ -4,14 +4,14 @@
 <!DOCTYPE html>
 <html>
 <head >
-
+<link rel="stylesheet" href="Style.css">
 <meta charset="UTF-8">
 <title>Merchant Details</title>
 </head>
 
 
 <body style="text-align:center">
-<h3 style="color:blue">Merchant Details</h3>
+<h3>Merchant Details</h3>
 <%
 List<MerchantStock> list = (List<MerchantStock>)request.getAttribute("obj");
 %>

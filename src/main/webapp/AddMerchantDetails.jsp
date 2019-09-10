@@ -3,12 +3,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="Style.css">
 <meta charset="UTF-8">
 <title>MerchantPage</title>
 </head>
 <body>
 <form name="index" style="text-align:center" method="post" action="addmerchantControl">
-<h3 style="color:blue">Add Merchant Stock Details</h3>
+<h3>Add Merchant Stock Details</h3>
 <table border="1" align="center" >
 <tr><td>Stock Id:</td><td><input type="text" name="stockid" value=""></td></tr>
 <tr><td>Item Id:</td><td><input type="text" name="itemid" value=""></td></tr>

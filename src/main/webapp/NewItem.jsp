@@ -3,12 +3,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="Style.css">
 <meta charset="UTF-8">
 <title>Add Item Page</title>
 </head>
 <body>
 <form name="index" style="text-align:center" method="post" action="createitem">
-<h3 style="color:blue">Create a new Item</h3>
+<h3>Create a new Item</h3>
 <table border="1" align="center" >
 <tr><td>Item Name:</td><td><input type="text" name="name" value=""></td></tr>
 <tr><td>Price:</td><td><input type="text" name="price" value=""></td></tr>

@@ -4,13 +4,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="Style.css">
 <meta charset="UTF-8">
 <title>Transactions Page</title>
 </head>
 <body align="center">
 
   <%@include file="DisplayTransactions.jsp" %>
-<h1 style="color:blue">Item Details</h1>
+<h1>Item Details</h1>
         	<%
         	List<Transactions> list = (List<Transactions>)request.getAttribute("obj");
         	%>

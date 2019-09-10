@@ -4,13 +4,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="Style.css">
 <meta charset="UTF-8">
 <title>Orders</title>
 </head>
 <%
  %>
 <body style="text-align:center">
-<h3 style="color:blue">Order Details</h3>
+<h3>Order Details</h3>
 <%
 String Accept="accept";
 String Reject="reject";
