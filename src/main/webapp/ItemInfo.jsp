@@ -4,13 +4,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="Style.css">
 <meta charset="UTF-8">
 <title>Item Info Page</title>
 </head>
 <body align="center">
 
   <%@include file="CheckItem.jsp" %>
-<h1 style="color:blue">Item Details</h1>
+<h1>Item Details</h1>
         	<%
         	ItemInfo itemInfoObj=(ItemInfo)request.getAttribute("obj");
         	int discount=(int)request.getAttribute("obj1");

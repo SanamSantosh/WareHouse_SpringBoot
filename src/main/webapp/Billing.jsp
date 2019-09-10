@@ -3,12 +3,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="Style.css">
 <meta charset="UTF-8">
 <title>Billing Page</title>
 </head>
 <body>
 <form name="index" style="text-align:center" method="post" action="transactioncontrol">
-<h3 style="color:blue">Billing</h3>
+<h3>Billing</h3>
 <table border="1" align="center">
 <tr><td>Customer Id:</td><td><input type="text" name="customer_id" value=""></td></tr>
 <tr><td>Item Id:</td><td><input type="text" name="item_id" value=""></td></tr>

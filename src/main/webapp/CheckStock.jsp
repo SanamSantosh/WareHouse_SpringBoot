@@ -3,12 +3,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="Style.css">
 <meta charset="UTF-8">
 <title>Add Stock Page</title>
 </head>
 <body>
 <form name="index" style="text-align:center" method="post" action=checkItem>
-<h3 style="color:blue">Check Item</h3>
+<h3>Check Item</h3>
 <table border="1" align="center" >
 <tr><td>Item Id:</td><td><input type="text" name="item_id" value=""></td></tr>
 <tr><td><input type="submit" name="index_validate" value="submit"></td></tr><tr>

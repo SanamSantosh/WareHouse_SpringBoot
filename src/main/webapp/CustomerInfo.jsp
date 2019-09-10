@@ -3,12 +3,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="Style.css">
 <meta charset="UTF-8">
 <title>Customer Information</title>
 </head>
 <body align="center">
   <%@include file="CustomerCheck.jsp" %>
-<h1 style="color:blue">Customer Details</h1>
+<h1>Customer Details</h1>
         	<%
         	CustomerInfo custObj=(CustomerInfo)request.getAttribute("obj");
         	%>

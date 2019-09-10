@@ -3,11 +3,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="Style.css">
 <meta charset="UTF-8">
 <title>Items Page</title>
 </head>
 <body style="text-align:center">
-<h3 style="color:blue">Items Page</h3>
+<h3>Items Page</h3>
   <p>Please Choose from the following options:</p>
 
   <h4>

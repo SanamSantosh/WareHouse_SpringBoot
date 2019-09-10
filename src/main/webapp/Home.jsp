@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="Style.css">
 <meta charset="UTF-8">
 <title>Home Page</title>
 </head>
@@ -29,7 +30,7 @@
 		<a href="displayMerchantDetails">Purchase Stock</a>
 	</h4>
   <br><br>
-  <input type="submit">
+  
   <a href="Login.jsp"><input type="button" name="button" value="Logout"></a>
 </body>
 </html>

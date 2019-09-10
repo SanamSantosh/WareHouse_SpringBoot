@@ -3,11 +3,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="Style.css">
 <meta charset="UTF-8">
 <title>Merchant Home page</title>
 </head>
 <body>
-<h3 style="color:blue">Home Page</h3>
+<h3>Home Page</h3>
 <p>Please Choose from the following options:</p>
 
   <h4>
