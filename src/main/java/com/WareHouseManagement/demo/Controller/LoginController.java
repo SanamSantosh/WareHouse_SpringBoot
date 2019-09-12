@@ -13,36 +13,35 @@ import com.WareHouseManagement.demo.Bean.Login;
 @RequestMapping("logincontrol")
 @SessionAttributes("Login")
 public class LoginController {
-	
+
 	@RequestMapping(method = RequestMethod.GET)
-	public ModelAndView logincontroller()
-	{
-		ModelAndView mv=new ModelAndView("Login.jsp");
-		Login loginObj=new Login();
+	public ModelAndView logincontroller() {
+		ModelAndView mv = new ModelAndView("Login.jsp");
+		Login loginObj = new Login();
 		mv.addObject(loginObj);
 		return mv;
 	}
-	
-	//this method is used for reading user id and password from the user and forwarding
-		//the same to the rest control to validate the credentials
+
+	// this method is used for reading user id and password from the user and
+	// forwarding
+	// the same to the rest control to validate the credentials
 	@RequestMapping(method = RequestMethod.POST)
-	public ModelAndView logincontrol( Login loginObj)
-	{
-		String url="http://localhost:8080/login/check";
-		RestTemplate rt=new RestTemplate();
-		ModelAndView mv=new ModelAndView();
-		String  status=rt.postForObject(url, loginObj, String.class);
-		
-	    if(status.equals("Yes")) {
-	    	mv.setViewName("Home.jsp");;
-	    	return mv;
-	    }
-	    else {
-	    	String reply="Invalid Credentials";
-	    	mv.setViewName("loginvalidation.jsp");
-	    	mv.addObject("obj",reply);
-	    	return mv;
-	    }
+	public ModelAndView logincontrol(Login loginObj) {
+		String url = "http://localhost:8080/login/check";
+		RestTemplate rt = new RestTemplate();
+		ModelAndView mv = new ModelAndView();
+		String status = rt.postForObject(url, loginObj, String.class);
+
+		if (status.equals("Yes")) {
+			mv.setViewName("Home.jsp");
+			;
+			return mv;
+		} else {
+			String reply = "Invalid Credentials";
+			mv.setViewName("loginvalidation.jsp");
+			mv.addObject("obj", reply);
+			return mv;
+		}
 	}
 
 }

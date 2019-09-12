@@ -1,9 +1,9 @@
 package com.WareHouseManagement.demo.Repository;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.WareHouseManagement.demo.Bean.CustomerInfo;
 
-public interface CustomerDetailsRepository extends CrudRepository<CustomerInfo, Integer>{
+public interface CustomerDetailsRepository extends JpaRepository<CustomerInfo, Integer>{
 
 }

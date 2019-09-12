@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,12 +8,16 @@
 <title>Transactions Page</title>
 </head>
 <body>
-<form name="index" style="text-align:center" method="post" action="displayTransaction">
-<h3>Transactions Page</h3>
-<p>Transaction Date:<input type="date" name="transaction_date" value=""></p>
-<input type="submit" name="index_validate" value="submit">
-<a href="Home.jsp"><input type="button" name="button" value="Back"></a>
-  <a href="Login.jsp"><input type="button" name="button" value="Logout"></a>
-  </form>
+	<form name="index" style="text-align: center" method="post"
+		action="displayTransaction">
+		<h3>Transactions Page</h3>
+		<p>
+			Transaction Date:<input type="date" name="transaction_date" value="">
+		</p>
+		<input type="submit" name="index_validate" value="submit"> <a
+			href="Home.jsp"><input type="button" name="button" value="Back"></a>
+		<a href="Login.jsp"><input type="button" name="button"
+			value="Logout"></a>
+	</form>
 </body>
 </html>

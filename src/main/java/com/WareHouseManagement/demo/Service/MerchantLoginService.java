@@ -1,6 +1,6 @@
 package com.WareHouseManagement.demo.Service;
 
-import java.util.ArrayList;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -14,23 +14,20 @@ import com.WareHouseManagement.demo.Repository.MerchantLoginRepository;
 @Component
 @EnableAutoConfiguration
 public class MerchantLoginService {
-	
+
 	@Autowired
 	MerchantLoginRepository merchantrepo;
-	
-	//this method is for validating merchant login credentials
+
+	// this method is for validating merchant login credentials
 	public String check(MerchantDetails log) {
-		String status = null;
-		ArrayList<MerchantDetails> loginObj=(ArrayList<MerchantDetails>) merchantrepo.findAll();
-		for (int i = 0; i < loginObj.size(); i++) {
-			if(log.getMerchant_id()==loginObj.get(i).getMerchant_id() && log.getPassword().equals(loginObj.get(i).getPassword())) {
-				
-				status="Yes";
-				break;
-			}
-			else {
-				status="No";
-			}
+		String status;
+		Optional<MerchantDetails> merchantObj = merchantrepo.findById(log.getMerchant_id());
+		if (merchantObj.isPresent() && log.getMerchant_id() == merchantObj.get().getMerchant_id()
+				&& log.getPassword().equals(merchantObj.get().getPassword())) {
+
+			status = "Yes";
+		} else {
+			status = "No";
 		}
 		return status;
 	}
