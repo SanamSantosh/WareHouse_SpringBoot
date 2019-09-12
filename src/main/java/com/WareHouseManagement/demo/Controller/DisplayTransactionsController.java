@@ -1,8 +1,5 @@
 package com.WareHouseManagement.demo.Controller;
 
-
-
-
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -23,21 +20,22 @@ import com.WareHouseManagement.demo.Bean.Transactions;
 @Controller
 @RequestMapping("displayTransaction")
 public class DisplayTransactionsController {
-	
-	//this method is used for getting the list of transaction details from the rest controller
+
+	// this method is used for getting the list of transaction details from the rest
+	// controller
 	@RequestMapping(method = RequestMethod.POST)
-	public ModelAndView CheckTransaction( String transaction_date,HttpSession session)
-	{
-		String url="http://localhost:8080/transactions/check";
+	public ModelAndView CheckTransaction(String transaction_date, HttpSession session) {
+		String url = "http://localhost:8080/transactions/check";
 		HttpHeaders requestHeaders = new HttpHeaders();
 		HttpEntity<String> requestEntity = new HttpEntity<>(transaction_date, requestHeaders);
-		RestTemplate rt=new RestTemplate();
-		ResponseEntity<List<Transactions>>  status=rt.exchange(url, HttpMethod.POST,requestEntity, new ParameterizedTypeReference<List<Transactions>>() {});
-	    ModelAndView mv=new ModelAndView("ViewTransactions.jsp");
-	    mv.addObject("obj",status.getBody());
-	    return mv;
-	   
-		
+		RestTemplate rt = new RestTemplate();
+		ResponseEntity<List<Transactions>> status = rt.exchange(url, HttpMethod.POST, requestEntity,
+				new ParameterizedTypeReference<List<Transactions>>() {
+				});
+		ModelAndView mv = new ModelAndView("ViewTransactions.jsp");
+		mv.addObject("obj", status.getBody());
+		return mv;
+
 	}
 
 }

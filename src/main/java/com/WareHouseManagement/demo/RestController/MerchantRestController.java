@@ -17,23 +17,23 @@ import com.WareHouseManagement.demo.Service.MerchantService;
 public class MerchantRestController {
 	@Autowired
 	MerchantService merchantService;
-	
+
 	@RequestMapping(value = "/insert", method = RequestMethod.POST)
-	   public String createMerchant(@RequestBody MerchantStock merchantobj) {
-		   String status=merchantService.createMerchant(merchantobj);
-			return status; 
-	   }
-	
+	public String createMerchant(@RequestBody MerchantStock merchantobj) {
+		String status = merchantService.createMerchant(merchantobj);
+		return status;
+	}
+
 	@RequestMapping(value = "/check", method = RequestMethod.GET)
-	   public List<MerchantStock> findTransaction() {  
-		List<MerchantStock> MerchnatObj=merchantService.displayDetails();
-		 return MerchnatObj; 
-	   }
-	
+	public List<MerchantStock> findTransaction() {
+		List<MerchantStock> MerchnatObj = merchantService.displayDetails();
+		return MerchnatObj;
+	}
+
 	@RequestMapping(value = "/update", method = RequestMethod.POST)
-	   public String updateStock(@RequestBody PurchaseDetails purchase) {
-		   String status=merchantService.updateStock(purchase);
-			return status; 
-	   }
+	public String updateStock(@RequestBody PurchaseDetails purchase) {
+		String status = merchantService.updateStock(purchase);
+		return status;
+	}
 
 }

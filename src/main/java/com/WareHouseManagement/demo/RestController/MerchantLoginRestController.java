@@ -12,15 +12,15 @@ import com.WareHouseManagement.demo.Service.MerchantLoginService;
 @RestController
 @RequestMapping("merchantlogin")
 public class MerchantLoginRestController {
-	
+
 	@Autowired
 	MerchantLoginService merchantService;
+
 	@RequestMapping(value = "/check", method = RequestMethod.POST)
-	   public String insert(@RequestBody MerchantDetails merchant) {
-		   String status=merchantService.check(merchant);
-			return status;
-		   
-		   
-	   }
+	public String insert(@RequestBody MerchantDetails merchant) {
+		String status = merchantService.check(merchant);
+		return status;
+
+	}
 
 }

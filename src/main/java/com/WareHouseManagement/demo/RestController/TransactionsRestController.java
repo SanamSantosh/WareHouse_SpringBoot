@@ -1,6 +1,5 @@
 package com.WareHouseManagement.demo.RestController;
 
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,23 +19,23 @@ public class TransactionsRestController {
 	TransactionsRepository transactionrepo;
 	@Autowired
 	TransactionsService transactionsService;
-	
+
 	@RequestMapping(value = "/insert", method = RequestMethod.POST)
-	   public String createTransactrion(@RequestBody Transactions tran) {
-		   String status=transactionsService.createTransaction(tran);
-			return status; 
-	   }
-	
+	public String createTransactrion(@RequestBody Transactions tran) {
+		String status = transactionsService.createTransaction(tran);
+		return status;
+	}
+
 	@RequestMapping(value = "/check", method = RequestMethod.POST)
-	   public List<Transactions> findTransaction(@RequestBody String trandate) {  
-		List<Transactions> tranObj=transactionsService.displayTransactions(trandate);
-		 return tranObj; 
-	   }
-	
+	public List<Transactions> findTransaction(@RequestBody String trandate) {
+		List<Transactions> tranObj = transactionsService.displayTransactions(trandate);
+		return tranObj;
+	}
+
 	@RequestMapping(value = "/delete", method = RequestMethod.POST)
-	   public String deleteTransactrion(@RequestBody String tranid) {
-		   String status=transactionsService.deleteTransaction(tranid);
-			return status; 
-	   }
+	public String deleteTransactrion(@RequestBody String tranid) {
+		String status = transactionsService.deleteTransaction(tranid);
+		return status;
+	}
 
 }

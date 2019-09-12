@@ -1,6 +1,5 @@
 package com.WareHouseManagement.demo.RestController;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,13 +15,14 @@ public class LoginRestController {
 
 	@Autowired
 	LoginService loginService;
-	//this method is for validating login credentials db operations handled in service 
+
+	// this method is for validating login credentials db operations handled in
+	// service
 	@RequestMapping(value = "/check", method = RequestMethod.POST)
-	   public String insert(@RequestBody Login log) {
-		   String status=loginService.check(log);
-			return status;
-		   
-		   
-	   }
+	public String insert(@RequestBody Login log) {
+		String status = loginService.check(log);
+		return status;
+
+	}
 
 }
